@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Form</h2>
+<h3>@Model.Name</h3>
+<h3>@Model.Id</h3>
+<h3>@Model.Dob</h3>
+<h3>@Model.Email</h3>
+
+@Html.ValidationSummary()
+
+<form>
+    Name:
+    <input type="text" name="name" class="form-control" value="@Model.Name" /> <br />
+    Id:
+    <input type="text" class="id" placeholder="Id" /><br />
+    Dob:
+    <input type="date" name="dob" value="" /><br />
+    Email:
+    <input type="text" name="email" value="" /><br />
+    <input type="submit" value="Submit" />
+</form>
